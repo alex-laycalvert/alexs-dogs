@@ -1,6 +1,8 @@
 import { prisma } from "@/server/db"
 import Image from 'next/image'
 
+export const revalidate = 300;
+
 export default async function Index() {
 	const images = await prisma.image.findMany()
 
