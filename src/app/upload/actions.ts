@@ -4,6 +4,12 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { env } from '@/env.mjs'
 import { prisma } from '@/server/db';
 
+type File = {
+	readonly name: string;
+	readonly lastModified: number;
+	arrayBuffer: () => Promise<ArrayBuffer>;
+}
+
 const s3 = new S3Client({
 	region: env.S3_UPLOAD_REGION,
 	credentials: {
@@ -16,8 +22,8 @@ export async function uploadImages(input: FormData) {
 	try {
 		console.info('Uploading request...')
 		console.info({ input })
-		const file = input.get('imageFile')
-		if (!file || !(file instanceof File)) {
+		const file = input.get('imageFile') as File | null;
+		if (!file) {
 			return {
 				ok: false,
 				err: 'invalid file'
