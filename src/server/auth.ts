@@ -19,8 +19,6 @@ declare module "next-auth" {
 	interface Session extends DefaultSession {
 		user: DefaultSession["user"] & {
 			id: string;
-			// ...other properties
-			// role: UserRole;
 		};
 	}
 }
@@ -32,6 +30,12 @@ declare module "next-auth" {
  */
 export const authOptions: NextAuthOptions = {
 	callbacks: {
+		signIn: ({ user }) => {
+			if (user.email !== env.ADMIN_EMAIL) {
+				throw new Error('UNAUTHORIZED EMAIL');
+			}
+			return true
+		},
 		redirect: () => {
 			return "/upload"
 		},
