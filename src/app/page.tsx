@@ -11,9 +11,8 @@ export default async function Index() {
 			<h1 className="flex w-full py-8 items-center justify-center font-bold pb-0 text-5xl text-black dark:text-white">Alex&apos;s Dogs</h1>
 			<div className="p-8 gap-8 columns-1 sm:columns-2 lg:columns-3 xl:w-2/3 mx-auto">
 				{images.map((image) => (
-					<a
+					<div
 						key={image.id}
-						href={image.imageUrl}
 					>
 						<div className="rounded-sm md:hover:scale-[1.025] transition-all flex break-inside-avoid-column flex-col items-center justify-center w-full mb-8 md:hover:shadow-lg md:hover:shadow-white border dark:border-gray-600">
 							<Image
@@ -35,7 +34,7 @@ export default async function Index() {
 								<p className="text-gray-600 dark:text-gray-400">{image.description}</p>
 							</div>
 						</div>
-					</a>
+					</div>
 				))}
 			</div>
 		</div>
