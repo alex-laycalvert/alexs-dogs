@@ -14,6 +14,8 @@ const s3 = new S3Client({
 
 export async function uploadImages(input: FormData) {
 	try {
+		console.info('Uploading request...')
+		console.info({ input })
 		const file = input.get('imageFile')
 		if (!file || !(file instanceof File)) {
 			return {

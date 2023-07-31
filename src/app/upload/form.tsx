@@ -8,13 +8,14 @@ export default function Form() {
 	const form = useRef<HTMLFormElement>(null)
 
 	async function handleSubmit(data: FormData) {
-		const response = await uploadImages(data)
+		console.info('uploading...');
+		const response = await uploadImages(data);
 		if (!response.ok) {
 			console.error(response.err);
-			alert('Error:' + response.err)
+			alert('Error:' + response.err);
 		} else {
-			form.current?.reset()
-			setImage(null)
+			form.current?.reset();
+			setImage(null);
 		}
 	}
 
