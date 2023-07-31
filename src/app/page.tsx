@@ -15,7 +15,7 @@ export default async function Index() {
 						key={image.id}
 						href={image.imageUrl}
 					>
-						<div className="rounded-sm hover:scale-[1.025] transition-all flex break-inside-avoid-column flex-col items-center justify-center w-full mb-8 hover:shadow-lg hover:shadow-white border dark:border-gray-600">
+						<div className="rounded-sm md:hover:scale-[1.025] transition-all flex break-inside-avoid-column flex-col items-center justify-center w-full mb-8 md:hover:shadow-lg md:hover:shadow-white border dark:border-gray-600">
 							<Image
 								className="object-cover w-full max-h-full"
 								alt={image.title}
