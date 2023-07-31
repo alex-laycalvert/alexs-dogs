@@ -12,7 +12,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<main className="min-h-screen w-full">
+					{children}
+				</main>
+			</body>
 		</html>
 	)
 }

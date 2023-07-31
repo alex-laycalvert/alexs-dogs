@@ -11,6 +11,12 @@ const config = {
 		appDir: true,
 		serverActions: true
 	},
+	images: {
+		domains: [
+			'alexs-dogs.s3.us-east-1.amazonaws.com',
+			's3.amazonaws.com',
+		]
+	}
 
 	/**
 	 * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config
