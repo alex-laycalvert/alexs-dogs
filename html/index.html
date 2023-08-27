@@ -25,57 +25,56 @@
       .header {
         width: 100%;
         max-width: 768px;
+      }
 
-        > .container {
-          padding: 1rem 2rem;
+      .header > .container {
+        padding: 1rem 2rem;
+      }
 
-          > .title {
-            width: 100%;
-            display: flex;
-            align-items: between;
+      .header > .container > .title {
+        width: 100%;
+        display: flex;
+        align-items: between;
+      }
 
-            > .text {
-              width: 100%;
-              font-size: 1.75rem;
-            }
+      .header > .container > .title > .text {
+        width: 100%;
+        font-size: 1.75rem;
+      }
 
-            > .links {
-              display: flex;
-              align-items: center;
-              grid-gap: 0.5rem;
+      .header > .container > .title > .links {
+        display: flex;
+        align-items: center;
+        grid-gap: 0.5rem;
+      }
 
-              > .icon {
-                color: gray;
-                transition: all 0.15s ease;
+      .header > .container > .title > .links > .icon {
+        color: gray;
+        transition: all 0.15s ease;
+      }
 
-                > iconify-icon {
-                  font-size: 2rem;
-                }
+      .header > .container > .title > .links > .icon > iconify-icon {
+        font-size: 2rem;
+      }
 
-                &:hover {
-                  color: navy;
-                }
-              }
-            }
-          }
+      .header > .container > .title > .links > .icon:hover {
+        color: navy;
+      }
 
-          > .subtitle {
-            font-size: 1.25rem;
-            font-weight: normal;
+      .header > .container > .subtitle {
+        font-size: 1.25rem;
+        font-weight: normal;
+      }
 
-            & a {
-              all: unset;
-              color: gray;
-              cursor: pointer;
-              transition: all 0.15s ease;
-
-              &:hover {
-                color: navy;
-                text-decoration: underline;
-              }
-            }
-          }
-        }
+      .header > .container > .subtitle a {
+        all: unset;
+        color: gray;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .header > .container > .subtitle a:hover {
+        color: navy;
+        text-decoration: underline;
       }
 
       .main {
@@ -83,7 +82,6 @@
         overflow-y: scroll;
         max-width: 768px;
         padding: 0 2rem;
-
         column-count: 1;
         column-gap: 1.5rem 1.5rem;
       }
@@ -99,19 +97,19 @@
       .card {
         border: 1px solid gray;
         margin-bottom: 1.5rem;
+      }
 
-        > .image {
-          width: 100%;
-          height: auto;
-        }
+      .card > .image {
+        width: 100%;
+        height: auto;
+      }
 
-        > .info {
-          padding: 0.5rem 1rem;
+      .card > .info {
+        padding: 0.5rem 1rem;
+      }
 
-          > .title {
-            margin-bottom: 0.25rem;
-          }
-        }
+      .card > .info > .title {
+        margin-bottom: 0.25rem;
       }
 
       @media (min-width: 500px) {
