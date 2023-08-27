@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        font-family: "Raleway";
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header {
+        width: 100%;
+        max-width: 768px;
+      }
+
+      .header > .container {
+        padding: 1rem 2rem;
+      }
+
+      .header > .container > .title {
+        width: 100%;
+        display: flex;
+        align-items: between;
+      }
+
+      .header > .container > .title > .text {
+        width: 100%;
+        font-size: 1.75rem;
+      }
+
+      .header > .container > .title > .links {
+        display: flex;
+        align-items: center;
+        grid-gap: 0.5rem;
+      }
+
+      .header > .container > .title > .links > .icon {
+        color: gray;
+        transition: all 0.15s ease;
+      }
+
+      .header > .container > .title > .links > .icon > iconify-icon {
+        font-size: 2rem;
+      }
+
+      .header > .container > .title > .links > .icon:hover {
+        color: navy;
+      }
+
+      .header > .container > .subtitle {
+        font-size: 1.25rem;
+        font-weight: normal;
+      }
+
+      .header > .container > .subtitle a {
+        all: unset;
+        color: gray;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .header > .container > .subtitle a:hover {
+        color: navy;
+        text-decoration: underline;
+      }
+
+      .main {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-width: 768px;
+        padding: 0 2rem;
+        column-count: 1;
+        column-gap: 1.5rem 1.5rem;
+      }
+
+      .footer {
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+
+      .card {
+        border: 1px solid gray;
+        margin-bottom: 1.5rem;
+      }
+
+      .card > .image {
+        width: 100%;
+        height: auto;
+      }
+
+      .card > .info {
+        padding: 0.5rem 1rem;
+      }
+
+      .card > .info > .title {
+        margin-bottom: 0.25rem;
+      }
+
+      @media (min-width: 500px) {
+        .main {
+          columns: 2;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .header > .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .main {
+          columns: 3;
+        }
+      }
+
+	  @media screen and (max-width: 767px) {
+	    _::-webkit-full-page-media, _:future, :root .safari-only {
+	      padding-bottom: 85px;
+	    }
+	  }
+    </style>
+    <title>Alex's Dogs</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="title">
+          <h1 class="text">Alex's Dogs</h1>
+          <div class="links">
+            <a
+              href="https://github.com/alex-laycalvert"
+              class="icon"
+              target="_blank"
+            >
+              <iconify-icon icon="line-md:github"></iconify-icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alexander-lay-calvert-2179501b4/"
+              class="icon"
+              target="_blank"
+            >
+              <iconify-icon icon="line-md:linkedin" />
+            </a>
+            <a
+              href="https://twitter.com/alex_layc"
+              class="icon"
+              target="_blank"
+            >
+              <iconify-icon icon="line-md:twitter"></iconify-icon>
+            </a>
+          </div>
+        </div>
+        <h2 class="subtitle">
+          <i
+            >by
+            <a href="https://alexlc.org" target="_blank">alex lay-calvert</a></i
+          >
+        </h2>
+      </div>
+    </header>
+    <main class="main">
+      <div class="card">
+        <img src="images/snoot1.jpg" alt="snoot1" class="image" />
+        <div class="info">
+          <h3 class="title"><i>snoot</i></h3>
+          <p class="description">he is the keeper of the snoot</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/sad_elf.jpg" alt="sad elf" class="image" />
+        <div class="info">
+          <h3 class="title"><i>kali is a sad elf</i></h3>
+          <p class="description">
+            all she does is provide for this family and we provide her with no
+            treats
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="images/double_slumped.jpg"
+          alt="double slumped"
+          class="image"
+        />
+        <div class="info">
+          <h3 class="title"><i>double slumped</i></h3>
+          <p class="description">
+            after a long day of play, neither can stand up anymore
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/snoot2.jpg" alt="snoot2" class="image" />
+        <div class="info">
+          <h3 class="title"><i>snoot 2: electric boogaloo</i></h3>
+          <p class="description">winston isn't the only snoot around here</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/zooted.jpg" alt="zooted" class="image" />
+        <div class="info">
+          <h3 class="title"><i>zooted</i></h3>
+          <p class="description">zonked, zilked, and just maybe, zooted</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/slumped_couch.jpg" alt="slumped couch" class="image" />
+        <div class="info">
+          <h3 class="title"><i>slumpin around</i></h3>
+          <p class="description">who does he think he is</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/metamorphosis.jpg" alt="metamorphosis" class="image" />
+        <div class="info">
+          <h3 class="title"><i>metamorphosis</i></h3>
+          <p class="description">the prophecy is fufilled</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/big_slump.jpg" alt="big slump" class="image" />
+        <div class="info">
+          <h3 class="title"><i>big slump</i></h3>
+          <p class="description">the biggest slump a slump could be</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/rapscallion.jpg" alt="rapscallion" class="image" />
+        <div class="info">
+          <h3 class="title"><i>rapscallion</i></h3>
+          <p class="description">an absolute mongrel</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/duality.jpg" alt="duality" class="image" />
+        <div class="info">
+          <h3 class="title"><i>duality of dog</i></h3>
+          <p class="description">one is play, one is sleep</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/cuddle_bugs.jpg" alt="cuddle bugs" class="image" />
+        <div class="info">
+          <h3 class="title"><i>cuddle bugs</i></h3>
+          <p class="description">they are masters of their fields</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/teef.jpg" alt="teef" class="image" />
+        <div class="info">
+          <h3 class="title"><i>teef</i></h3>
+          <p class="description">he is ferocious</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/stacked.jpg" alt="stacked" class="image" />
+        <div class="info">
+          <h3 class="title"><i>stacked</i></h3>
+          <p class="description">stackin up one by one</p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer safari-only">
+      <a href="https://www.buymeacoffee.com/laycalva" target="_blank">
+        <img
+          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=laycalva&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
