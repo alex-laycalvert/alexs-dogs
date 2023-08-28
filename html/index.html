@@ -21,7 +21,6 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="index.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -34,7 +33,7 @@
 
       body {
         height: 100vh;
-        overflow: hidden;
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -296,7 +295,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer safari-only">
+    <footer id="footer" class="footer">
       <a href="https://www.buymeacoffee.com/laycalva" target="_blank">
         <img
           src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=laycalva&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
@@ -305,4 +304,24 @@
       </a>
     </footer>
   </body>
+  <script>
+  	function checkSafari() {
+  	  const userAgent = navigator.userAgent
+      const isSafari =
+        userAgent.includes("Safari") &&
+        userAgent.includes("Mobile") &&
+        !userAgent.includes("Chrome") &&
+        !userAgent.includes("Firefox") &&
+        !navigator.brave
+      if (!isSafari) {
+        return;
+      }
+      const footer = document.querySelector('footer');
+      if (!footer) {
+        return;
+      }
+      footer.classList.add('safari-only');
+  	}
+  	checkSafari()
+  </script>
 </html>
